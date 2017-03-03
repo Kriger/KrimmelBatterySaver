@@ -1,2 +1,2 @@
 # KrimmelBatterySaver
-Simple notebook tool for saving battery
+Simple battery saver for Notebooks
