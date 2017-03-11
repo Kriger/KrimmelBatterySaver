@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using System.IO;
 using System.Windows.Forms;
 using KNT.Modules;
 
@@ -8,8 +7,8 @@ namespace KNT
 {
     public partial class MainWindow
     {
-        private static readonly Icon Enable = new Icon(Directory.GetCurrentDirectory() + @"\Icons\enable.ico");
-        private static readonly Icon Disable = new Icon(Directory.GetCurrentDirectory() + @"\Icons\disable.ico");
+        private static readonly Icon Enable = Properties.Resources.enable;
+        private static readonly Icon Disable = Properties.Resources.disable;
 
         private static readonly NotifyIcon TrayIcon = new NotifyIcon
         {

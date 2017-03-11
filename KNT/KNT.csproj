@@ -50,7 +50,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>disable.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -132,10 +133,6 @@
   <ItemGroup>
     <Resource Include="Icons\disable.ico" />
     <Resource Include="Icons\enable.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="disable.ico" />
-    <Resource Include="enable.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
