@@ -71,12 +71,39 @@ namespace KNT.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Включить.
+        /// </summary>
+        internal static string DisableText {
+            get {
+                return ResourceManager.GetString("DisableText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
         /// </summary>
         internal static System.Drawing.Icon enable {
             get {
                 object obj = ResourceManager.GetObject("enable", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Отключить.
+        /// </summary>
+        internal static string EnableText {
+            get {
+                return ResourceManager.GetString("EnableText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Выход.
+        /// </summary>
+        internal static string ExitText {
+            get {
+                return ResourceManager.GetString("ExitText", resourceCulture);
             }
         }
     }

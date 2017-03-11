@@ -121,7 +121,16 @@
   <data name="disable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\disable.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DisableText" xml:space="preserve">
+    <value>Включить</value>
+  </data>
   <data name="enable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\enable.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EnableText" xml:space="preserve">
+    <value>Отключить</value>
+  </data>
+  <data name="ExitText" xml:space="preserve">
+    <value>Выход</value>
   </data>
 </root>

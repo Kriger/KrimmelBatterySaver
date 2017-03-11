@@ -24,9 +24,9 @@ namespace KNT
             Hide();
             
             TrayIcon.ContextMenuStrip = new ContextMenuStrip();
-            TrayIcon.ContextMenuStrip.Items.Add("Отключить", null, OnClickDisable);
-            TrayIcon.ContextMenuStrip.Items.Add("Включить", null, OnClickEnable);
-            TrayIcon.ContextMenuStrip.Items.Add("Выход", null, OnClickExit);
+            TrayIcon.ContextMenuStrip.Items.Add(Properties.Resources.DisableText, null, OnClickDisable);
+            TrayIcon.ContextMenuStrip.Items.Add(Properties.Resources.EnableText, null, OnClickEnable);
+            TrayIcon.ContextMenuStrip.Items.Add(Properties.Resources.ExitText, null, OnClickExit);
 
             TrayIcon.ContextMenuStrip.Items[1].Visible = false;
         }
