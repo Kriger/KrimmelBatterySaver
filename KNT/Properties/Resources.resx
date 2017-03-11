@@ -122,15 +122,24 @@
     <value>..\Icons\disable.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DisableText" xml:space="preserve">
-    <value>Включить</value>
+    <value>Отключить</value>
   </data>
   <data name="Enable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\enable.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EnableText" xml:space="preserve">
-    <value>Отключить</value>
+    <value>Включить</value>
+  </data>
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>Текущий процесс будет закрыт.</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Приложение уже запущено</value>
   </data>
   <data name="ExitText" xml:space="preserve">
     <value>Выход</value>
+  </data>
+  <data name="ProcessName" xml:space="preserve">
+    <value>KNT</value>
   </data>
 </root>

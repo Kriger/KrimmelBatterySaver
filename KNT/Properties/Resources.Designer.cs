@@ -71,7 +71,7 @@ namespace KNT.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Включить.
+        ///   Ищет локализованную строку, похожую на Отключить.
         /// </summary>
         internal static string DisableText {
             get {
@@ -90,11 +90,29 @@ namespace KNT.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Отключить.
+        ///   Ищет локализованную строку, похожую на Включить.
         /// </summary>
         internal static string EnableText {
             get {
                 return ResourceManager.GetString("EnableText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Текущий процесс будет закрыт..
+        /// </summary>
+        internal static string ErrorMessage {
+            get {
+                return ResourceManager.GetString("ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Приложение уже запущено.
+        /// </summary>
+        internal static string ErrorTitle {
+            get {
+                return ResourceManager.GetString("ErrorTitle", resourceCulture);
             }
         }
         
@@ -104,6 +122,15 @@ namespace KNT.Properties {
         internal static string ExitText {
             get {
                 return ResourceManager.GetString("ExitText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на KNT.
+        /// </summary>
+        internal static string ProcessName {
+            get {
+                return ResourceManager.GetString("ProcessName", resourceCulture);
             }
         }
     }
