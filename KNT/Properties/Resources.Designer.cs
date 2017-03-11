@@ -63,9 +63,9 @@ namespace KNT.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
         /// </summary>
-        internal static System.Drawing.Icon disable {
+        internal static System.Drawing.Icon Disable {
             get {
-                object obj = ResourceManager.GetObject("disable", resourceCulture);
+                object obj = ResourceManager.GetObject("Disable", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
@@ -82,9 +82,9 @@ namespace KNT.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
         /// </summary>
-        internal static System.Drawing.Icon enable {
+        internal static System.Drawing.Icon Enable {
             get {
-                object obj = ResourceManager.GetObject("enable", resourceCulture);
+                object obj = ResourceManager.GetObject("Enable", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }

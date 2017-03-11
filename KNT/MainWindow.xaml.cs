@@ -7,8 +7,8 @@ namespace KNT
 {
     public partial class MainWindow
     {
-        private static readonly Icon Enable = Properties.Resources.enable;
-        private static readonly Icon Disable = Properties.Resources.disable;
+        private static readonly Icon Enable = Properties.Resources.Enable;
+        private static readonly Icon Disable = Properties.Resources.Disable;
 
         private static readonly NotifyIcon TrayIcon = new NotifyIcon
         {
