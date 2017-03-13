@@ -124,14 +124,5 @@ namespace KNT.Properties {
                 return ResourceManager.GetString("ExitText", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на KNT.
-        /// </summary>
-        internal static string ProcessName {
-            get {
-                return ResourceManager.GetString("ProcessName", resourceCulture);
-            }
-        }
     }
 }

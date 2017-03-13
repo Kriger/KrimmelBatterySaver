@@ -139,7 +139,4 @@
   <data name="ExitText" xml:space="preserve">
     <value>Выход</value>
   </data>
-  <data name="ProcessName" xml:space="preserve">
-    <value>KNT</value>
-  </data>
 </root>
