@@ -139,4 +139,10 @@
   <data name="ExitText" xml:space="preserve">
     <value>Выход</value>
   </data>
+  <data name="TipDisableText" xml:space="preserve">
+    <value>Krimmel Battery Saver - Выключено</value>
+  </data>
+  <data name="TipEnableText" xml:space="preserve">
+    <value>Krimmel Battery Saver - Включено</value>
+  </data>
 </root>

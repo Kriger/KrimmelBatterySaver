@@ -124,5 +124,23 @@ namespace KNT.Properties {
                 return ResourceManager.GetString("ExitText", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Krimmel Battery Saver - Выключено.
+        /// </summary>
+        internal static string TipDisableText {
+            get {
+                return ResourceManager.GetString("TipDisableText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Krimmel Battery Saver - Включено.
+        /// </summary>
+        internal static string TipEnableText {
+            get {
+                return ResourceManager.GetString("TipEnableText", resourceCulture);
+            }
+        }
     }
 }

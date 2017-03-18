@@ -10,7 +10,7 @@ namespace KNT
         private static readonly Icon Enable = Properties.Resources.Enable;
         private static readonly Icon Disable = Properties.Resources.Disable;
 
-        private static readonly NotifyIcon TrayIcon = new NotifyIcon { Visible = true, Icon = Enable };
+        private static readonly NotifyIcon TrayIcon = new NotifyIcon { Visible = true, Icon = Enable, Text = Properties.Resources.TipEnableText };
         private readonly Module _module = new PowerLineModule(TrayIcon);
 
         public MainWindow()
@@ -38,6 +38,7 @@ namespace KNT
             TrayIcon.ContextMenuStrip.Items[1].Visible = false;
             _module.EnableModule();
             TrayIcon.Icon = Enable;
+            TrayIcon.Text = Properties.Resources.TipEnableText;
         }
 
         private void OnClickDisable(object sender, EventArgs eventArgs)
@@ -46,6 +47,7 @@ namespace KNT
             TrayIcon.ContextMenuStrip.Items[1].Visible = true;
             _module.DisableModule();
             TrayIcon.Icon = Disable;
+            TrayIcon.Text = Properties.Resources.TipDisableText;
         }
     }
 }
