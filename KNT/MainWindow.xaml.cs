@@ -17,7 +17,11 @@ namespace KNT
         {
             InitializeComponent();
             Hide();
+            InitializeTrayIcon();
+        }
 
+        private void InitializeTrayIcon()
+        {
             TrayIcon.ContextMenuStrip = new ContextMenuStrip();
             TrayIcon.ContextMenuStrip.Items.Add(Properties.Resources.DisableText, null, OnClickDisable);
             TrayIcon.ContextMenuStrip.Items.Add(Properties.Resources.EnableText, null, OnClickEnable);
