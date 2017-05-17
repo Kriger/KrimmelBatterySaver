@@ -4,8 +4,10 @@ using Microsoft.Win32;
 
 namespace KNT.Modules
 {
-    class PowerLineModule : Module
+    internal class PowerLineModule : Module
     {
+        private PowerLineStatus _currentPowerLineStatus;
+
         public PowerLineModule(NotifyIcon notifyIcon) : base(notifyIcon)
         {
             SystemEvents.PowerModeChanged += HandleEvent;
@@ -22,25 +24,38 @@ namespace KNT.Modules
                     NotifyUser("Unknown Power Line Status", "Power Line Status Changed", ToolTipIcon.Error);
                     break;
             }
+
+            _currentPowerLineStatus = SystemInformation.PowerStatus.PowerLineStatus;
         }
 
-        public override void HandleEvent(object sender, PowerModeChangedEventArgs e)
+        private void HandleEvent(object sender, PowerModeChangedEventArgs e)
         {
             if (e.Mode != PowerModes.StatusChange) return;
             switch (SystemInformation.PowerStatus.PowerLineStatus)
             {
                 case PowerLineStatus.Online:
-                    DisablePowerSaving();
-                    NotifyUser("Disable Power Saving", "Power Line Status Changed", ToolTipIcon.None);
+                    if (_currentPowerLineStatus != PowerLineStatus.Online)
+                    {
+                        DisablePowerSaving();
+                        NotifyUser("Disable Power Saving", "Power Line Status Changed", ToolTipIcon.None);
+                    }
                     break;
                 case PowerLineStatus.Offline:
-                    EnablePowerSaving();
-                    NotifyUser("Enable Power Saving", "Power Line Status Changed", ToolTipIcon.None);
+                    if (_currentPowerLineStatus != PowerLineStatus.Offline)
+                    {
+                        EnablePowerSaving();
+                        NotifyUser("Enable Power Saving", "Power Line Status Changed", ToolTipIcon.None);
+                    }
                     break;
                 default:
-                    NotifyUser("Unknown Power Line Status", "Power Line Status Changed", ToolTipIcon.Error);
+                    if (_currentPowerLineStatus != PowerLineStatus.Unknown)
+                    {
+                        NotifyUser("Unknown Power Line Status", "Power Line Status Changed", ToolTipIcon.Error);
+                    }
                     break;
             }
+
+            _currentPowerLineStatus = SystemInformation.PowerStatus.PowerLineStatus;
         }
         
         public override void EnableModule()

@@ -12,7 +12,7 @@ namespace KNT.Modules
             _notifyIcon = notifyIcon;
         }
 
-        public abstract void HandleEvent(object sender, PowerModeChangedEventArgs e);
+        //public abstract void HandleEvent(object sender, PowerModeChangedEventArgs e);
         public abstract void EnableModule();
         public abstract void DisableModule();
 
