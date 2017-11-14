@@ -27,4 +27,6 @@
 Предложения по улучшению утилиты и сообщения об ошибках принимаются в issues или по адресу support@krimmel.ru
 
 <hr>
-За иконки большая благодарность <a href="https://vk.com/alexandra_zheleznyak" title="Александре Железняк">
+За иконки большая благодарность [Александре](https://vk.com/alexandra_zheleznyak). 
+
+
