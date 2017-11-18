@@ -1,4 +1,5 @@
-# KrimmelBatterySaver
+# Krimmel Battery Saver [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Free%20tool%20to%20increase%20uptime%20for%20a%20windows%20laptop&url=https://github.com/Kriger/KrimmelBatterySaver/releases/tag/Current&hashtags=notebook,windows,battery-life,tools,utility)
+
 [![Code Climate](https://codeclimate.com/github/Kriger/KrimmelBatterySaver/badges/gpa.svg)](https://codeclimate.com/github/Kriger/KrimmelBatterySaver) [![Test Coverage](https://codeclimate.com/github/Kriger/KrimmelBatterySaver/badges/coverage.svg)](https://codeclimate.com/github/Kriger/KrimmelBatterySaver/coverage) [![Issue Count](https://codeclimate.com/github/Kriger/KrimmelBatterySaver/badges/issue_count.svg)](https://codeclimate.com/github/Kriger/KrimmelBatterySaver)
 
 Утилита для автоматического включения режима энергосбережения
