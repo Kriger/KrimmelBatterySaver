@@ -1,5 +1,4 @@
 ﻿using System.Windows.Forms;
-using Microsoft.Win32;
 
 namespace KNT.Modules
 {
@@ -11,8 +10,7 @@ namespace KNT.Modules
         {
             _notifyIcon = notifyIcon;
         }
-
-        //public abstract void HandleEvent(object sender, PowerModeChangedEventArgs e);
+        
         public abstract void EnableModule();
         public abstract void DisableModule();
 
@@ -22,10 +20,8 @@ namespace KNT.Modules
             _notifyIcon.BalloonTipIcon = icon;
             _notifyIcon.BalloonTipTitle = title;
             _notifyIcon.BalloonTipText = text;
-
-            //_notifyIcon.Visible = true;
-            _notifyIcon.ShowBalloonTip(1000);
-            //_notifyIcon.Visible = false;
+            
+            _notifyIcon.ShowBalloonTip(2000);
         }
     }
 }
