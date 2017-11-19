@@ -21,19 +21,24 @@ namespace KNT
             InitializeTrayIcon();
         }
 
+        private ToolStripDropDownButton BuildToolStripDropDownButton()
+        {
+            var subMenu = new ToolStripDropDownButton(Properties.Resources.SubMenuTitle);
+            subMenu.DropDownItems.Add(Properties.Resources.EnergySavingTitle, null, OnClickEnergySaving);
+            subMenu.DropDownItems.Add(Properties.Resources.BalancedModeTitle, null, OnClickBalancedMode);
+            subMenu.DropDownItems.Add(Properties.Resources.HighPerformanceTitle, null, OnClickHighPerformance);
+
+            return subMenu;
+        }
+
         private void InitializeTrayIcon()
         {
-            var subMenu = new ToolStripDropDownButton("Выбрать план");
-            subMenu.DropDownItems.Add("Экономия заряда", null, OnClickEnergySaving);
-            subMenu.DropDownItems.Add("Сбалансированный режим", null, OnClickBalancedMode);
-            subMenu.DropDownItems.Add("Высокая производительность", null, OnClickHighPerformance);
-
             TrayIcon.ContextMenuStrip = new ContextMenuStrip();
             TrayIcon.ContextMenuStrip.Items.Add(Properties.Resources.DisableText, null, OnClickDisable);
             TrayIcon.ContextMenuStrip.Items.Add(Properties.Resources.EnableText, null, OnClickEnable);
-            TrayIcon.ContextMenuStrip.Items.Add(subMenu);
+            TrayIcon.ContextMenuStrip.Items.Add(BuildToolStripDropDownButton());
             TrayIcon.ContextMenuStrip.Items.Add(new ToolStripSeparator());
-            TrayIcon.ContextMenuStrip.Items.Add("Настройки", null, OnClickSettings);
+            TrayIcon.ContextMenuStrip.Items.Add(Properties.Resources.SettingsText, null, OnClickSettings);
             TrayIcon.ContextMenuStrip.Items.Add(new ToolStripSeparator());
             TrayIcon.ContextMenuStrip.Items.Add(Properties.Resources.ExitText, null, OnClickExit);
 

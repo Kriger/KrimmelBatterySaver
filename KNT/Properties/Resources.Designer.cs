@@ -19,7 +19,7 @@ namespace KNT.Properties {
     // с помощью такого средства, как ResGen или Visual Studio.
     // Чтобы добавить или удалить член, измените файл .ResX и снова запустите ResGen
     // с параметром /str или перестройте свой проект VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -57,6 +57,15 @@ namespace KNT.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Сбалансированный режим.
+        /// </summary>
+        internal static string BalancedModeTitle {
+            get {
+                return ResourceManager.GetString("BalancedModeTitle", resourceCulture);
             }
         }
         
@@ -99,6 +108,15 @@ namespace KNT.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Экономия заряда.
+        /// </summary>
+        internal static string EnergySavingTitle {
+            get {
+                return ResourceManager.GetString("EnergySavingTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Текущий процесс будет закрыт..
         /// </summary>
         internal static string ErrorMessage {
@@ -122,6 +140,33 @@ namespace KNT.Properties {
         internal static string ExitText {
             get {
                 return ResourceManager.GetString("ExitText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Высокая производительность.
+        /// </summary>
+        internal static string HighPerformanceTitle {
+            get {
+                return ResourceManager.GetString("HighPerformanceTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Настройки.
+        /// </summary>
+        internal static string SettingsText {
+            get {
+                return ResourceManager.GetString("SettingsText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Выбрать план.
+        /// </summary>
+        internal static string SubMenuTitle {
+            get {
+                return ResourceManager.GetString("SubMenuTitle", resourceCulture);
             }
         }
         
