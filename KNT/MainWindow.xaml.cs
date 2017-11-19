@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using KNT.Modules;
@@ -28,7 +29,55 @@ namespace KNT
             subMenu.DropDownItems.Add(Properties.Resources.BalancedModeTitle, null, OnClickBalancedMode);
             subMenu.DropDownItems.Add(Properties.Resources.HighPerformanceTitle, null, OnClickHighPerformance);
 
+
+            int currentShemeIndex = -1;
+            switch(GetCurrentSchemeGUID())
+            {
+                case "a1841308-3541-4fab-bc81-f71556f20b4a":
+                    currentShemeIndex = 0;
+                    break;
+                case "381b4222-f694-41f0-9685-ff5bb260df2e":
+                    currentShemeIndex = 1;
+                    break;
+                case "8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c":
+                    currentShemeIndex = 2;
+                    break;
+            }
+
+            subMenu.DropDownItems[currentShemeIndex].Font = new Font(subMenu.DropDownItems[currentShemeIndex].Font, System.Drawing.FontStyle.Bold);   
+
             return subMenu;
+        }
+        
+
+        private string GetCurrentSchemeGUID()
+        {
+            var cmd = new Process
+            {
+                StartInfo =
+                {
+                    FileName = "cmd.exe",
+                    RedirectStandardInput = true,
+                    RedirectStandardOutput = true,
+                    CreateNoWindow = true,
+                    UseShellExecute = false
+                }
+            };
+            cmd.Start();
+
+            var reader = cmd.StandardOutput;
+
+            cmd.StandardInput.WriteLine(Properties.Resources.GetCurrentShemeCmd);
+            var output = string.Empty;
+            while (output != null && !output.Contains("GUID"))
+            {
+                output = reader.ReadLine();
+            }
+            Console.WriteLine(output?.Split(':')[1].Split(' ')[1]);
+            cmd.StandardInput.Close();
+            cmd.WaitForExit();
+
+            return output?.Split(':')[1].Split(' ')[1];
         }
 
         private void InitializeTrayIcon()
@@ -54,21 +103,24 @@ namespace KNT
         private void OnClickEnergySaving(object sender, EventArgs eventArgs)
         {
             ((ChangePowerModeModule)_changePowerModeModule).SetPowerSavingMode();
+            InitializeTrayIcon();
         }
 
         private void OnClickBalancedMode(object sender, EventArgs eventArgs)
         {
             ((ChangePowerModeModule)_changePowerModeModule).SetBalanceMode();
+            InitializeTrayIcon();
         }
 
         private void OnClickHighPerformance(object sender, EventArgs eventArgs)
         {
             ((ChangePowerModeModule)_changePowerModeModule).SetHighPerformanceMode();
+            InitializeTrayIcon();
         }
 
         private void OnClickSettings(object sender, EventArgs eventArgs)
         {
-            
+            //TODO: Сделать страницу с настройками
         }
 
         private void OnClickEnable(object sender, EventArgs eventArgs)
