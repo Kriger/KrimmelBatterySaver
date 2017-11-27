@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:KNT"
         mc:Ignorable="d"
         Title="Настройки" Height="204" Width="400" ResizeMode="NoResize">
     <Grid>
@@ -18,6 +17,5 @@
         <Label Content="Язык:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Режим от сети:" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top"/>
         <Label Content="Режим от баттареи:" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top"/>
-
     </Grid>
 </Window>

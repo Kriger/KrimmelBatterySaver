@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="BalancedModeGUID" xml:space="preserve">
-    <value />
+    <value>381b4222-f694-41f0-9685-ff5bb260df2e</value>
   </data>
   <data name="BalancedModeTitle" xml:space="preserve">
     <value>Сбалансированный режим</value>
@@ -137,7 +137,7 @@
     <value>Включить</value>
   </data>
   <data name="EnergySavingGUID" xml:space="preserve">
-    <value />
+    <value>a1841308-3541-4fab-bc81-f71556f20b4a</value>
   </data>
   <data name="EnergySavingTitle" xml:space="preserve">
     <value>Экономия заряда</value>
@@ -155,7 +155,7 @@
     <value>powercfg /getactivescheme</value>
   </data>
   <data name="HighPerformanceGUID" xml:space="preserve">
-    <value />
+    <value>8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c</value>
   </data>
   <data name="HighPerformanceTitle" xml:space="preserve">
     <value>Высокая производительность</value>
