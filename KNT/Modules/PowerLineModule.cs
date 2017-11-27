@@ -22,6 +22,9 @@ namespace KNT.Modules
                 case PowerLineStatus.Offline:
                     EnablePowerSaving();
                     break;
+                case PowerLineStatus.Unknown:
+                    NotifyUser("Unknown Power Line Status", "Power Line Status Changed", ToolTipIcon.Error);
+                    break;
                 default:
                     NotifyUser("Unknown Power Line Status", "Power Line Status Changed", ToolTipIcon.Error);
                     break;

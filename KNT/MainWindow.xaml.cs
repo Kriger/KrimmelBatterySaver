@@ -49,7 +49,6 @@ namespace KNT
             return subMenu;
         }
         
-
         private string GetCurrentSchemeGUID()
         {
             var cmd = new Process
@@ -120,7 +119,9 @@ namespace KNT
 
         private void OnClickSettings(object sender, EventArgs eventArgs)
         {
-            //TODO: Сделать страницу с настройками
+            var settings = new Settings();
+
+            settings.ShowDialog();
         }
 
         private void OnClickEnable(object sender, EventArgs eventArgs)
