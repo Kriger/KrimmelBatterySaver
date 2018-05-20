@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Windows.Forms;
 
-namespace KNT.Modules
+namespace KBS.Modules
 {
     internal class ChangePowerModeModule : Module
     {

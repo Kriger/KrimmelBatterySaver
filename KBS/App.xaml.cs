@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Windows;
 
-namespace KNT
+namespace KBS
 {
     /// <summary>
     /// Interaction logic for App.xaml
@@ -16,7 +16,7 @@ namespace KNT
             if (Process.GetProcessesByName(thisProc.ProcessName).Length > 1)
             { 
                 // If ther is more than one, than it is already running.
-                MessageBox.Show(KNT.Properties.Resources.ErrorMessage, KNT.Properties.Resources.ErrorTitle, MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                MessageBox.Show(KBS.Properties.Resources.ErrorMessage, KBS.Properties.Resources.ErrorTitle, MessageBoxButton.OK, MessageBoxImage.Exclamation);
                 Current.Shutdown();
                 return;
             }

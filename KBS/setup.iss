@@ -33,7 +33,7 @@ Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Users\Krimmel\Source\Repos\KrimmelBatterySaver\KNT\bin\Release\Krimmel Battery Saver.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Krimmel\Source\Repos\KrimmelBatterySaver\KBS\bin\Release\Krimmel Battery Saver.exe"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]

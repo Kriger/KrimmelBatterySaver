@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace KNT.Modules
+namespace KBS.Modules
 {
     internal abstract class Module
     {
