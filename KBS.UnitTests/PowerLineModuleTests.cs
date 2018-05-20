@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace KNT.UnitTests
+namespace KBS.UnitTests
 {
     [TestClass]
     public class PowerLineModuleTests

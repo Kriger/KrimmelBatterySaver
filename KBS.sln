@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KNT", "KNT\KNT.csproj", "{A6548F38-58A0-49B9-BF5A-AE79D499A10B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KBS", "KBS\KBS.csproj", "{A6548F38-58A0-49B9-BF5A-AE79D499A10B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KNT.UnitTests", "KNT.UnitTests\KNT.UnitTests.csproj", "{CB9806E6-0C4E-401A-91E1-61BF10BF9188}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KBS.UnitTests", "KBS.UnitTests\KBS.UnitTests.csproj", "{CB9806E6-0C4E-401A-91E1-61BF10BF9188}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
