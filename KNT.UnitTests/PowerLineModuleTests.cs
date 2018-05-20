@@ -3,7 +3,7 @@
 namespace KNT.UnitTests
 {
     [TestClass]
-    public class PowerLineModules
+    public class PowerLineModuleTests
     {
         [TestMethod]
         public void TestMethod1()
