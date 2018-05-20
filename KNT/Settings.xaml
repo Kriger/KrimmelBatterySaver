@@ -6,17 +6,16 @@
         mc:Ignorable="d"
         Title="Настройки" Height="204" Width="400" ResizeMode="NoResize">
     <Grid>
-        <Button x:Name="SaveButton" Content="Сохранить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,175,0,0" Click="SaveButton_Click"/>
-        <Button x:Name="CloseButton" Content="Закрыть" HorizontalAlignment="Left" Margin="299,175,0,0" VerticalAlignment="Top" Width="75" Click="CloseButton_Click"/>
-        <CheckBox Content="Автозагрузка" HorizontalAlignment="Left" Margin="10,145,0,0" VerticalAlignment="Top" IsChecked="True"/>
-        <ComboBox x:Name="cb_language" HorizontalAlignment="Left" Margin="157,28,0,0" VerticalAlignment="Top" Width="217">
+        <Button x:Name="SaveButton" Content="Сохранить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,141,0,0" Click="SaveButton_Click"/>
+        <Button x:Name="CloseButton" Content="Закрыть" HorizontalAlignment="Left" Margin="299,141,0,0" VerticalAlignment="Top" Width="75" Click="CloseButton_Click"/>
+        <CheckBox Content="Автозагрузка" HorizontalAlignment="Left" Margin="10,111,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <ComboBox x:Name="cb_language" HorizontalAlignment="Left" Margin="157,10,0,0" VerticalAlignment="Top" Width="217">
             <ComboBox Width="120"/>
         </ComboBox>
-        <ComboBox x:Name="cb_online" HorizontalAlignment="Left" Margin="157,66,0,0" VerticalAlignment="Top" Width="217" RenderTransformOrigin="0.487,0.589"/>
-        <ComboBox x:Name="cb_offline" HorizontalAlignment="Left" Margin="157,106,0,0" VerticalAlignment="Top" Width="217"/>
-        <Label Content="Язык:" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top"/>
-        <Label Content="Режим от сети:" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top"/>
-        <Label Content="Режим от баттареи:" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top"/>
-
+        <ComboBox x:Name="cb_online" HorizontalAlignment="Left" Margin="157,40,0,0" VerticalAlignment="Top" Width="217" RenderTransformOrigin="0.487,0.589"/>
+        <ComboBox x:Name="cb_offline" HorizontalAlignment="Left" Margin="157,69,0,0" VerticalAlignment="Top" Width="217"/>
+        <Label Content="Язык:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Режим от сети:" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top"/>
+        <Label Content="Режим от баттареи:" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

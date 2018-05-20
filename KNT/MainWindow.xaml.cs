@@ -79,21 +79,6 @@ namespace KNT
             return output?.Split(':')[1].Split(' ')[1];
         }
 
-            var reader = cmd.StandardOutput;
-
-            cmd.StandardInput.WriteLine(Properties.Resources.GetCurrentShemeCmd);
-            var output = string.Empty;
-            while (output != null && !output.Contains("GUID"))
-            {
-                output = reader.ReadLine();
-            }
-            Console.WriteLine(output?.Split(':')[1].Split(' ')[1]);
-            cmd.StandardInput.Close();
-            cmd.WaitForExit();
-
-            return output?.Split(':')[1].Split(' ')[1];
-        }
-
         private void InitializeTrayIcon()
         {
             TrayIcon.ContextMenuStrip = new ContextMenuStrip();
