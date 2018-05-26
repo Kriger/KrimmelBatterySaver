@@ -10,7 +10,12 @@ namespace KBS
         private static readonly Icon Enable = Properties.Resources.Enable;
         private static readonly Icon Disable = Properties.Resources.Disable;
 
-        private static readonly NotifyIcon TrayIcon = new NotifyIcon { Visible = true, Icon = Enable, Text = Properties.Resources.TipEnableText };
+        private static readonly NotifyIcon TrayIcon = new NotifyIcon
+            {
+                Visible = true,
+                Icon = Enable,
+                Text = Properties.Resources.TipEnableText
+            };
         private readonly Module _powerLineModule = new PowerLineModule(TrayIcon);
 
         public MainWindow()
