@@ -13,8 +13,7 @@ namespace KBS.Modules
         
         public abstract void EnableModule();
         public abstract void DisableModule();
-
-
+        
         protected void NotifyUser(string title, string text, ToolTipIcon icon)
         {
             _notifyIcon.BalloonTipIcon = icon;

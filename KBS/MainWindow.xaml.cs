@@ -12,7 +12,6 @@ namespace KBS
 
         private static readonly NotifyIcon TrayIcon = new NotifyIcon { Visible = true, Icon = Enable, Text = Properties.Resources.TipEnableText };
         private readonly Module _powerLineModule = new PowerLineModule(TrayIcon);
-        private readonly Module _changePowerModeModule = new ChangePowerModeModule(TrayIcon);
 
         public MainWindow()
         {
@@ -53,17 +52,17 @@ namespace KBS
 
         private void OnClickEnergySaving(object sender, EventArgs eventArgs)
         {
-            ((ChangePowerModeModule)_changePowerModeModule).SetPowerSavingMode();
+            ((PowerLineModule)_powerLineModule).SetPowerSavingMode();
         }
 
         private void OnClickBalancedMode(object sender, EventArgs eventArgs)
         {
-            ((ChangePowerModeModule)_changePowerModeModule).SetBalanceMode();
+            ((PowerLineModule)_powerLineModule).SetBalanceMode();
         }
 
         private void OnClickHighPerformance(object sender, EventArgs eventArgs)
         {
-            ((ChangePowerModeModule)_changePowerModeModule).SetHighPerformanceMode();
+            ((PowerLineModule)_powerLineModule).SetHighPerformanceMode();
         }
 
         private void OnClickSettings(object sender, EventArgs eventArgs)
