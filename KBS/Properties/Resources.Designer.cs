@@ -70,6 +70,15 @@ namespace KBS.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на powercfg /s 381b4222-f694-41f0-9685-ff5bb260df2e.
+        /// </summary>
+        internal static string BalanceModeCommand {
+            get {
+                return ResourceManager.GetString("BalanceModeCommand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
         /// </summary>
         internal static System.Drawing.Icon Disable {
@@ -144,11 +153,29 @@ namespace KBS.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на powercfg /s 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c.
+        /// </summary>
+        internal static string HighPerformanceModeCommand {
+            get {
+                return ResourceManager.GetString("HighPerformanceModeCommand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Высокая производительность.
         /// </summary>
         internal static string HighPerformanceTitle {
             get {
                 return ResourceManager.GetString("HighPerformanceTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на powercfg /s a1841308-3541-4fab-bc81-f71556f20b4a.
+        /// </summary>
+        internal static string PowersavingModeCommand {
+            get {
+                return ResourceManager.GetString("PowersavingModeCommand", resourceCulture);
             }
         }
         

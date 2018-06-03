@@ -120,6 +120,9 @@
   <data name="BalancedModeTitle" xml:space="preserve">
     <value>Сбалансированный режим</value>
   </data>
+  <data name="BalanceModeCommand" xml:space="preserve">
+    <value>powercfg /s 381b4222-f694-41f0-9685-ff5bb260df2e</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Disable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\disable.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,8 +148,14 @@
   <data name="ExitText" xml:space="preserve">
     <value>Выход</value>
   </data>
+  <data name="HighPerformanceModeCommand" xml:space="preserve">
+    <value>powercfg /s 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c</value>
+  </data>
   <data name="HighPerformanceTitle" xml:space="preserve">
     <value>Высокая производительность</value>
+  </data>
+  <data name="PowersavingModeCommand" xml:space="preserve">
+    <value>powercfg /s a1841308-3541-4fab-bc81-f71556f20b4a</value>
   </data>
   <data name="SettingsText" xml:space="preserve">
     <value>Настройки</value>
