@@ -87,18 +87,12 @@ namespace KBS.Modules
         /// <summary>
         /// Makes energy saving power scheme active on
         /// </summary>
-        private void EnablePowerSaving()
-        {
-            RunCmdCommand("powercfg /s a1841308-3541-4fab-bc81-f71556f20b4a");
-        }
+        private void EnablePowerSaving() => RunCmdCommand("powercfg /s a1841308-3541-4fab-bc81-f71556f20b4a");
 
         /// <summary>
         /// Makes high performance power scheme active on
         /// </summary>
-        private void DisablePowerSaving()
-        {
-            RunCmdCommand("powercfg /s 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c");
-        }
+        private void DisablePowerSaving() => RunCmdCommand("powercfg /s 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c");
 
         /// <summary>
         /// Wrapper for the command
