@@ -74,7 +74,7 @@ namespace KBS
 
             cmd.StandardInput.WriteLine(Properties.Resources.GetCurrentShemeCmd);
             var input = string.Empty;
-            while (input != null && !input.Contains("GUID"))
+            while (input?.Contains("GUID") == false)
             {
                 input = reader.ReadLine();
             }

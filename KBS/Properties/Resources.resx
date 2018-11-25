@@ -160,6 +160,12 @@
   <data name="HighPerformanceTitle" xml:space="preserve">
     <value>Высокая производительность</value>
   </data>
+  <data name="LanguageRusText" xml:space="preserve">
+    <value>Русский</value>
+  </data>
+  <data name="LanguageEngText" xml:space="preserve">
+    <value>English</value>
+  </data>
   <data name="SettingsText" xml:space="preserve">
     <value>Настройки</value>
   </data>
