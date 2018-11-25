@@ -15,7 +15,8 @@ namespace KBS
             cb_language.Items.Clear();
             cb_language.Items.Add(Properties.Resources.LanguageRusText);
             cb_language.Items.Add(Properties.Resources.LanguageEngText);
-            cb_language.SelectedIndex = 0;
+            cb_language.SelectedIndex = 
+                Properties.Settings.Default.SelectedLanguage == Properties.Resources.LanguageRusText ? 0 : 1;
 
             cb_online.Items.Add(Properties.Resources.HighPerformanceTitle);
             cb_online.Items.Add(Properties.Resources.BalancedModeTitle);
