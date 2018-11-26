@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
@@ -10,12 +11,13 @@ namespace KBS
     {
         private static readonly Icon Enable = Properties.Resources.Enable;
         private static readonly Icon Disable = Properties.Resources.Disable;
+        private static readonly Dictionary<string, string> LocalizedResources = new Dictionary<string, string>();
 
         private static readonly NotifyIcon TrayIcon = new NotifyIcon
         {
             Visible = true,
             Icon = Enable,
-            Text = Properties.Resources.TipEnableText
+            Text = Properties.ResourcesRus.TipEnableText
         };
 
         private readonly Module _powerLineModule = new PowerLineModule(TrayIcon);
@@ -30,10 +32,10 @@ namespace KBS
 
         private ToolStripDropDownButton BuildToolStripDropDownButton()
         {
-            var subMenu = new ToolStripDropDownButton(Properties.Resources.SubMenuTitle);
-            subMenu.DropDownItems.Add(Properties.Resources.EnergySavingTitle, null, OnClickEnergySaving);
-            subMenu.DropDownItems.Add(Properties.Resources.BalancedModeTitle, null, OnClickBalancedMode);
-            subMenu.DropDownItems.Add(Properties.Resources.HighPerformanceTitle, null, OnClickHighPerformance);
+            var subMenu = new ToolStripDropDownButton(LocalizedResources["SubMenuTitle"]);
+            subMenu.DropDownItems.Add(LocalizedResources["EnergySavingTitle"], null, OnClickEnergySaving);
+            subMenu.DropDownItems.Add(LocalizedResources["BalancedModeTitle"], null, OnClickBalancedMode);
+            subMenu.DropDownItems.Add(LocalizedResources["HighPerformanceTitle"], null, OnClickHighPerformance);
 
             int currentSchemeIndex = -1;
             switch (GetCurrentSchemeGUID())
@@ -92,16 +94,45 @@ namespace KBS
 
         private void InitializeTrayIcon()
         {
+            SetLanguageTextValues();
+            
             TrayIcon.ContextMenuStrip = new ContextMenuStrip();
-            TrayIcon.ContextMenuStrip.Items.Add(Properties.Resources.DisableText, null, OnClickDisable);
-            TrayIcon.ContextMenuStrip.Items.Add(Properties.Resources.EnableText, null, OnClickEnable);
+            TrayIcon.ContextMenuStrip.Items.Add(LocalizedResources["DisableText"], null, OnClickDisable);
+            TrayIcon.ContextMenuStrip.Items.Add(LocalizedResources["EnableText"], null, OnClickEnable);
             TrayIcon.ContextMenuStrip.Items.Add(BuildToolStripDropDownButton());
             TrayIcon.ContextMenuStrip.Items.Add(new ToolStripSeparator());
-            TrayIcon.ContextMenuStrip.Items.Add(Properties.Resources.SettingsText, null, OnClickSettings);
+            TrayIcon.ContextMenuStrip.Items.Add(LocalizedResources["SettingsText"], null, OnClickSettings);
             TrayIcon.ContextMenuStrip.Items.Add(new ToolStripSeparator());
-            TrayIcon.ContextMenuStrip.Items.Add(Properties.Resources.ExitText, null, OnClickExit);
+            TrayIcon.ContextMenuStrip.Items.Add(LocalizedResources["ExitText"], null, OnClickExit);
 
             TrayIcon.ContextMenuStrip.Items[1].Visible = false;
+        }
+
+        private void SetLanguageTextValues()
+        {
+            LocalizedResources.Clear();
+            if (Properties.Settings.Default.SelectedLanguage == Properties.ResourcesRus.LanguageRusText)
+            {
+                LocalizedResources["DisableText"] = Properties.ResourcesRus.DisableText;
+                LocalizedResources["EnableText"] = Properties.ResourcesRus.EnableText;
+                LocalizedResources["SettingsText"] = Properties.ResourcesRus.SettingsText;
+                LocalizedResources["ExitText"] = Properties.ResourcesRus.ExitText;
+                LocalizedResources["SubMenuTitle"] = Properties.ResourcesRus.SubMenuTitle;
+                LocalizedResources["EnergySavingTitle"] = Properties.ResourcesRus.EnergySavingTitle;
+                LocalizedResources["BalancedModeTitle"] = Properties.ResourcesRus.BalancedModeTitle;
+                LocalizedResources["HighPerformanceTitle"] = Properties.ResourcesRus.HighPerformanceTitle;
+            }
+            else
+            {
+                LocalizedResources["DisableText"] = Properties.ResourcesEng.DisableText;
+                LocalizedResources["EnableText"] = Properties.ResourcesEng.EnableText;
+                LocalizedResources["SettingsText"] = Properties.ResourcesEng.SettingsText;
+                LocalizedResources["ExitText"] = Properties.ResourcesEng.ExitText;
+                LocalizedResources["SubMenuTitle"] = Properties.ResourcesEng.SubMenuTitle;
+                LocalizedResources["EnergySavingTitle"] = Properties.ResourcesEng.EnergySavingTitle;
+                LocalizedResources["BalancedModeTitle"] = Properties.ResourcesEng.BalancedModeTitle;
+                LocalizedResources["HighPerformanceTitle"] = Properties.ResourcesEng.HighPerformanceTitle;
+            }
         }
 
         private void OnClickExit(object sender, EventArgs eventArgs)
@@ -133,6 +164,8 @@ namespace KBS
             var settings = new Settings();
 
             settings.ShowDialog();
+            
+            InitializeTrayIcon();
         }
 
         private void OnClickEnable(object sender, EventArgs eventArgs)
@@ -141,7 +174,7 @@ namespace KBS
             TrayIcon.ContextMenuStrip.Items[1].Visible = false;
             _powerLineModule.EnableModule();
             TrayIcon.Icon = Enable;
-            TrayIcon.Text = Properties.Resources.TipEnableText;
+            TrayIcon.Text = Properties.ResourcesRus.TipEnableText;
         }
 
         private void OnClickDisable(object sender, EventArgs eventArgs)
@@ -150,7 +183,7 @@ namespace KBS
             TrayIcon.ContextMenuStrip.Items[1].Visible = true;
             _powerLineModule.DisableModule();
             TrayIcon.Icon = Disable;
-            TrayIcon.Text = Properties.Resources.TipDisableText;
+            TrayIcon.Text = Properties.ResourcesRus.TipDisableText;
         }
     }
 }

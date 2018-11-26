@@ -70,30 +70,12 @@ namespace KBS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Сбалансированный режим.
-        /// </summary>
-        public static string BalancedModeTitle {
-            get {
-                return ResourceManager.GetString("BalancedModeTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         public static System.Drawing.Icon Disable {
             get {
                 object obj = ResourceManager.GetObject("Disable", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Отключить.
-        /// </summary>
-        public static string DisableText {
-            get {
-                return ResourceManager.GetString("DisableText", resourceCulture);
             }
         }
         
@@ -108,56 +90,11 @@ namespace KBS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Включить.
-        /// </summary>
-        public static string EnableText {
-            get {
-                return ResourceManager.GetString("EnableText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to a1841308-3541-4fab-bc81-f71556f20b4a.
         /// </summary>
         public static string EnergySavingGUID {
             get {
                 return ResourceManager.GetString("EnergySavingGUID", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Экономия заряда.
-        /// </summary>
-        public static string EnergySavingTitle {
-            get {
-                return ResourceManager.GetString("EnergySavingTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Текущий процесс будет закрыт..
-        /// </summary>
-        public static string ErrorMessage {
-            get {
-                return ResourceManager.GetString("ErrorMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Приложение уже запущено.
-        /// </summary>
-        public static string ErrorTitle {
-            get {
-                return ResourceManager.GetString("ErrorTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Выход.
-        /// </summary>
-        public static string ExitText {
-            get {
-                return ResourceManager.GetString("ExitText", resourceCulture);
             }
         }
         
@@ -176,69 +113,6 @@ namespace KBS.Properties {
         public static string HighPerformanceGUID {
             get {
                 return ResourceManager.GetString("HighPerformanceGUID", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Высокая производительность.
-        /// </summary>
-        public static string HighPerformanceTitle {
-            get {
-                return ResourceManager.GetString("HighPerformanceTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to English.
-        /// </summary>
-        public static string LanguageEngText {
-            get {
-                return ResourceManager.GetString("LanguageEngText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Русский.
-        /// </summary>
-        public static string LanguageRusText {
-            get {
-                return ResourceManager.GetString("LanguageRusText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Настройки.
-        /// </summary>
-        public static string SettingsText {
-            get {
-                return ResourceManager.GetString("SettingsText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Выбрать план.
-        /// </summary>
-        public static string SubMenuTitle {
-            get {
-                return ResourceManager.GetString("SubMenuTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Krimmel Battery Saver - Выключено.
-        /// </summary>
-        public static string TipDisableText {
-            get {
-                return ResourceManager.GetString("TipDisableText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Krimmel Battery Saver - Включено.
-        /// </summary>
-        public static string TipEnableText {
-            get {
-                return ResourceManager.GetString("TipEnableText", resourceCulture);
             }
         }
     }

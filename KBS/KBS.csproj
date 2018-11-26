@@ -80,6 +80,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+      <Compile Include="Properties\ResourcesEng.Designer.cs"/>
+      <Compile Include="Properties\ResourcesRus.Designer.cs"/>
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
@@ -121,6 +123,8 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+      <EmbeddedResource Include="Properties\ResourcesEng.resx"/>
+      <EmbeddedResource Include="Properties\ResourcesRus.resx"/>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
