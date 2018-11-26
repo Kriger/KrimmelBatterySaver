@@ -101,9 +101,9 @@ namespace KBS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to powercfg /getactivescheme.
         /// </summary>
-        public static string GetCurrentShemeCmd {
+        public static string GetCurrentSchemeCmd {
             get {
-                return ResourceManager.GetString("GetCurrentShemeCmd", resourceCulture);
+                return ResourceManager.GetString("GetCurrentSchemeCmd", resourceCulture);
             }
         }
         
