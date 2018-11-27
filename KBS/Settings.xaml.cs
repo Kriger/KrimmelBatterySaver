@@ -9,7 +9,7 @@ namespace KBS
         private readonly string _highPerformance = Properties.Resources.HighPerformanceGUID;
         private readonly string _balanceMode = Properties.Resources.BalancedModeGUID;
         private readonly string _energySaving = Properties.Resources.EnergySavingGUID;
-        
+
         private static readonly Dictionary<string, string> LocalizedResources = new Dictionary<string, string>();
 
         public Settings()
@@ -21,24 +21,24 @@ namespace KBS
             SaveButton.Content = LocalizedResources["SaveButtonTitle"];
             CloseButton.Content = LocalizedResources["CloseButtonTitle"];
             Autostart.Content = LocalizedResources["Autostart"];
-            LanguageLabel.Content =LocalizedResources["LanguageLabel"];
+            LanguageLabel.Content = LocalizedResources["LanguageLabel"];
             PowerlineLabel.Content = LocalizedResources["PowerlineLabel"];
             BatteryLabel.Content = LocalizedResources["BatteryLabel"];
 
             CbLanguage.Items.Clear();
             CbLanguage.Items.Add(Properties.ResourcesRus.LanguageRusText);
             CbLanguage.Items.Add(Properties.ResourcesRus.LanguageEngText);
-            CbLanguage.SelectedIndex = 
+            CbLanguage.SelectedIndex =
                 Properties.Settings.Default.SelectedLanguage == Properties.ResourcesRus.LanguageRusText ? 0 : 1;
 
             CbOnline.Items.Add(LocalizedResources["HighPerformanceTitle"]);
             CbOnline.Items.Add(LocalizedResources["BalancedModeTitle"]);
-            CbOnline.SelectedIndex = 
+            CbOnline.SelectedIndex =
                 Properties.Settings.Default.OnlineModeGUID == new Guid(_highPerformance) ? 0 : 1;
 
             CbOffline.Items.Add(LocalizedResources["BalancedModeTitle"]);
             CbOffline.Items.Add(LocalizedResources["EnergySavingTitle"]);
-            CbOffline.SelectedIndex = 
+            CbOffline.SelectedIndex =
                 Properties.Settings.Default.OfflineModeGUID == new Guid(_balanceMode) ? 0 : 1;
         }
 
@@ -54,7 +54,7 @@ namespace KBS
                 LocalizedResources["PowerlineLabel"] = Properties.ResourcesRus.PowerlineLabel;
                 LocalizedResources["BatteryLabel"] = Properties.ResourcesRus.BatteryLabel;
                 LocalizedResources["Autostart"] = Properties.ResourcesRus.Autostart;
-                
+
                 LocalizedResources["EnergySavingTitle"] = Properties.ResourcesRus.EnergySavingTitle;
                 LocalizedResources["BalancedModeTitle"] = Properties.ResourcesRus.BalancedModeTitle;
                 LocalizedResources["HighPerformanceTitle"] = Properties.ResourcesRus.HighPerformanceTitle;
@@ -68,7 +68,7 @@ namespace KBS
                 LocalizedResources["PowerlineLabel"] = Properties.ResourcesEng.PowerlineLabel;
                 LocalizedResources["BatteryLabel"] = Properties.ResourcesEng.BatteryLabel;
                 LocalizedResources["Autostart"] = Properties.ResourcesEng.Autostart;
-                
+
                 LocalizedResources["EnergySavingTitle"] = Properties.ResourcesEng.EnergySavingTitle;
                 LocalizedResources["BalancedModeTitle"] = Properties.ResourcesEng.BalancedModeTitle;
                 LocalizedResources["HighPerformanceTitle"] = Properties.ResourcesEng.HighPerformanceTitle;
