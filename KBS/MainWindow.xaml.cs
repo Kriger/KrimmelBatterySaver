@@ -143,19 +143,19 @@ namespace KBS
 
         private void OnClickEnergySaving(object sender, EventArgs eventArgs)
         {
-            ((ChangePowerModeModule) _changePowerModeModule).SetPowerSavingMode();
+            ChangePowerModeModule.SetPowerSavingMode();
             InitializeTrayIcon();
         }
 
         private void OnClickBalancedMode(object sender, EventArgs eventArgs)
         {
-            ((ChangePowerModeModule) _changePowerModeModule).SetBalanceMode();
+            ChangePowerModeModule.SetBalanceMode();
             InitializeTrayIcon();
         }
 
         private void OnClickHighPerformance(object sender, EventArgs eventArgs)
         {
-            ((ChangePowerModeModule) _changePowerModeModule).SetHighPerformanceMode();
+            ChangePowerModeModule.SetHighPerformanceMode();
             InitializeTrayIcon();
         }
 

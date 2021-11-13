@@ -59,9 +59,7 @@ namespace KBS.Modules
                     break;
                 default:
                     if (_currentPowerLineStatus != PowerLineStatus.Unknown)
-                    {
                         NotifyUser("Unknown Power Line Status", "Power Line Status Changed", ToolTipIcon.Error);
-                    }
                     break;
             }
 
@@ -99,7 +97,6 @@ namespace KBS.Modules
         /// </summary>
         private static void RunCmdCommand(string command)
         {
-            //
             var cmd = new Process
             {
                 StartInfo =
